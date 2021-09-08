@@ -29,13 +29,6 @@ int main()
 	//Load GLAD so it configures OPENGL
 	gladLoadGL();
 
-
-	HICON hIcon = static_cast<HICON>(::LoadImage(NULL,
-		MAKEINTRESOURCE("icon.ico"),
-		IMAGE_ICON,
-		48, 48,    // or whatever size icon you want to load
-		LR_DEFAULTCOLOR);
-
 	//OpenGL viewport
 	glViewport(0, 0, 1000, 560);
 

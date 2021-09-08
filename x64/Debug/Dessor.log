@@ -1,6 +1,4 @@
 ﻿  main.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': redefinición de macro
-D:\Documentos\Dev\Dessor\Libraries\include\glad\glad.h(32): message : vea la definición anterior de 'APIENTRY'
-D:\Documentos\Dev\Dessor\main.cpp(34,3): warning C4302: 'conversión de tipo': truncamiento de 'const char *' a 'WORD'
-D:\Documentos\Dev\Dessor\main.cpp(37,19): error C2059: error de sintaxis: ';'
-D:\Documentos\Dev\Dessor\main.cpp(37,19): error C2143: error de sintaxis: falta '(' delante de ';'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+D:\Documentos\Dev\Dessor\Libraries\include\glad\glad.h(32): message : see previous definition of 'APIENTRY'
+  Dessor.vcxproj -> D:\Documentos\Dev\Dessor\x64\Debug\Dessor.exe
