@@ -50,7 +50,19 @@ END
 // PNG
 //
 
-IDB_PNG1                PNG                     "icon.png"
+IDB_PNG1                PNG                     "D:\\Documentos\\Dev\\Dessor\\icon.png"
+
+IDB_PNG2                PNG                     "icon.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon.ico"
 
 #endif    // Spanish (Spain, International Sort) resources
 /////////////////////////////////////////////////////////////////////////////
