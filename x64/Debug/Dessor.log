@@ -1,4 +1,13 @@
 ﻿  master.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
 D:\Documentos\Dev\Dessor\Libraries\include\glad\glad.h(32): message : see previous definition of 'APIENTRY'
-  Dessor.vcxproj -> D:\Documentos\Dev\Dessor\x64\Debug\Dessor.exe
+D:\Documentos\Dev\Dessor\master.cpp(88,3): error C2065: 'triangle_shader': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(89,21): error C2065: 'vao': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,22): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,38): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,53): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,69): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,84): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,100): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,115): error C2065: 'clear_color': undeclared identifier
+D:\Documentos\Dev\Dessor\master.cpp(97,128): error C2198: 'PFNGLCLEARCOLORPROC': too few arguments for call

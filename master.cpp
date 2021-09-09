@@ -8,6 +8,25 @@
 #include <imgui/imgui_impl_opengl3.h>
 // #include <gl/glu.h>
 // #include<SOIL/SOIL.h>
+
+// Vertex Shader source code
+const char* vertexShaderSource = "#version 330 core\n"
+"layout (location = 0) in vec3 aPos;\n"
+"uniform float size;\n"
+"void main()\n"
+"{\n"
+"   gl_Position = vec4(size * aPos.x, size * aPos.y, size * aPos.z, 1.0);\n"
+"}\0";
+//Fragment Shader source code
+const char* fragmentShaderSource = "#version 330 core\n"
+"out vec4 FragColor;\n"
+"uniform vec4 color;\n"
+"void main()\n"
+"{\n"
+"   FragColor = color;\n"
+"}\n\0";
+
+
 int main()
 {
 	// Initialize GLFW
@@ -40,20 +59,83 @@ int main()
 	//OpenGL viewport
 	glViewport(0, 0, 1000, 560);
 
-	glClearColor(0.12f, 0.12f, 0.19f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+	// Create Vertex Shader Object and get its reference
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	// Attach Vertex Shader source to the Vertex Shader Object
+	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+	// Compile the Vertex Shader into machine code
+	glCompileShader(vertexShader);
 
-	//GLFWimage icons[1];
-	//icons[0].pixels = SOIL_load_image("icon.png", &icons[0].width, &icons[0].height, 0, SOIL_LOAD_RGBA);
-	//glfwSetWindowIcon(window, 1, icons);
-	//SOIL_free_image_data(icons[0].pixels);
+	// Create Fragment Shader Object and get its reference
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	// Attach Fragment Shader source to the Fragment Shader Object
+	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+	// Compile the Vertex Shader into machine code
+	glCompileShader(fragmentShader);
 
-	// https://github.com/littlstar/soil
+	// Create Shader Program Object and get its reference
+	GLuint shaderProgram = glCreateProgram();
+	// Attach the Vertex and Fragment Shaders to the Shader Program
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	// Wrap-up/Link all the shaders together into the Shader Program
+	glLinkProgram(shaderProgram);
 
-	glfwSwapBuffers(window);
+	// Delete the now useless Vertex and Fragment Shader objects
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+	glDeleteShader(fragmentShader);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Vertices coordinates
+	GLfloat vertices[] =
+	{
+		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower left corner
+		0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower right corner
+		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f // Upper corner
+	};
+
+	// Create reference containers for the Vartex Array Object and the Vertex Buffer Object
+	GLuint VAO, VBO;
+
+	// Generate the VAO and VBO with only 1 object each
+	glGenVertexArrays(1, &VAO);
+	glGenBuffers(1, &VBO);
+
+	// Make the VAO the current Vertex Array Object by binding it
+	glBindVertexArray(VAO);
+
+	// Bind the VBO specifying it's a GL_ARRAY_BUFFER
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	// Introduce the vertices into the VBO
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	// Configure the Vertex Attribute so that OpenGL knows how to read the VBO
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	// Enable the Vertex Attribute so that OpenGL knows to use it
+	glEnableVertexAttribArray(0);
+
+	// Bind both the VBO and VAO to 0 so that we don't accidentally modify the VAO and VBO we created
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindVertexArray(0);
+
+
+
+	// Setup Dear ImGui context
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
@@ -68,9 +150,8 @@ int main()
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init(glsl_version);
 
-	bool show_demo_window = false;
-	bool show_another_window = false;
-	ImVec4 clear_color = ImVec4(0.12f, 0.12f, 0.19f, 1.0f);
+	bool show_window = true;
+	// ImVec4 clear_color = ImVec4(0.12f, 0.12f, 0.19f, 1.0f);
 
     while (!glfwWindowShouldClose(window))
     {
@@ -79,32 +160,15 @@ int main()
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
         // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
         // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
-        glfwPollEvents();
+		glClearColor(0.12f, 0.12f, 0.19f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+		glfwPollEvents();
 
+		glUseProgram(shaderProgam);
         // Start the Dear ImGui frame
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-        if (show_demo_window)
-            ImGui::ShowDemoWindow(&show_demo_window);
-
-        // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-        {
-            static float f = 30.0f;
-
-            ImGui::Begin("Edit");                          // Create a window called "Hello, world!" and append into it.
-
-            ImGui::Text("Edit dimensions");               // Display some text (you can use a format strings too)
-            ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-
-            ImGui::SliderFloat("FOV", &f, 30.0f, 120.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-            ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
-
-            ImGui::Text("%.0f FPS", (ImGui::GetIO().Framerate));
-            ImGui::End();
-        }
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
         // Rendering
         ImGui::Render();
         int display_w, display_h;
