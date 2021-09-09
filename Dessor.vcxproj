@@ -148,9 +148,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui.cpp" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui_demo.cpp" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui_tables.cpp" />
+    <ClCompile Include="Libraries\include\IMGUI\imgui_widgets.cpp" />
     <ClCompile Include="master.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Libraries\include\IMGUI\imconfig.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imgui.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imgui_impl_glfw.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imgui_internal.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imstb_rectpack.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imstb_textedit.h" />
+    <ClInclude Include="Libraries\include\IMGUI\imstb_truetype.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

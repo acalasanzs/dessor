@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\ImGui">
+      <UniqueIdentifier>{b0fdf8be-3c07-422e-9848-b74d4659bbb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\ImGui">
+      <UniqueIdentifier>{a2b6a99f-eea8-4ff4-b950-27e30cb9d902}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad.c">
@@ -21,10 +27,55 @@
     <ClCompile Include="master.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui_demo.cpp">
+      <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui_draw.cpp">
+      <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui_impl_glfw.cpp">
+      <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui_impl_opengl3.cpp">
+      <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui_tables.cpp">
+      <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\include\IMGUI\imgui_widgets.cpp">
+      <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imconfig.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imgui.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imgui_impl_glfw.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imgui_impl_opengl3.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imgui_internal.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imstb_rectpack.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imstb_textedit.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\IMGUI\imstb_truetype.h">
+      <Filter>Archivos de encabezado\ImGui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
