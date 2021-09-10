@@ -36,6 +36,7 @@ int main()
 
 	// Tell GLFW what version of OpenGL we are using 
 	// In this case we are using OpenGL 3.3
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	// Tell GLFW we are using the CORE profile
 	// So that means we only have the modern functions
@@ -58,6 +59,14 @@ int main()
 	// Specify the viewport of OpenGL in the Window
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
 	glViewport(0, 0, 800, 800);
+
+
+	// Create Vertex Shader Object and get its reference
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	// Attach Vertex Shader source to the Vertex Shader Object
+	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+	// Compile the Vertex Shader into machine code
+	glCompileShader(vertexShader);
 
 
 	// Initialize ImGUI
@@ -103,7 +112,7 @@ int main()
 		// Particular widget styling
 		static int i2 = 3;
 		static int ifov = 60;
-		static float i3 = 3.0f;
+		static float size = 3.0;
 		static char name[128] = "5";
 		static const ImVec4 edge_color = ImVec4(0.25f, 0.25f, 0.90f, 1.00f);
 		static const ImVec4 inside_color = ImVec4(0.55f, 0.55f, 0.90f, 1.00f);
@@ -118,8 +127,8 @@ int main()
 		ImGui::SameLine();
 		ImGui::TextColored(ImVec4(255, 0, 255, 255), name);
 		ImGui::NewLine();
+		ImGui::SliderFloat("SIZE", &size, 1.0, 10.0);
 		ImGui::SliderInt("FOV", &ifov, 30, 120, "%d");
-		ImGui::SliderFloat("SIZE", &i3, 1.0f, 10.0f);
 		ImGui::NewLine();
 		ImGui::Button("Render", ImVec2(250, 60));
 		ImGui::BeginChild("Inside color", size2);
