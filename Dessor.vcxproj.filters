@@ -24,9 +24,6 @@
     <ClCompile Include="glad.c">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
-    <ClCompile Include="master.cpp">
-      <Filter>Archivos de recursos</Filter>
-    </ClCompile>
     <ClCompile Include="Libraries\include\IMGUI\imgui.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
@@ -47,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="Libraries\include\IMGUI\imgui_widgets.cpp">
       <Filter>Archivos de recursos\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de recursos</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
