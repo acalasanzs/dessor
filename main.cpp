@@ -110,7 +110,9 @@ int main()
 
 		// ImGUI window creation
 		// Particular widget styling
-		static int i2 = 60;
+		static int i2 = 3;
+		static int ifov = 60;
+		static float i3 = 3.0f;
 		static char name[128] = "5";
 		static const ImVec4 edge_color = ImVec4(0.25f, 0.25f, 0.90f, 1.00f);
 		static const ImVec4 inside_color = ImVec4(0.55f, 0.55f, 0.90f, 1.00f);
@@ -125,7 +127,8 @@ int main()
 		ImGui::SameLine();
 		ImGui::TextColored(ImVec4(255, 0, 255, 255), name);
 		ImGui::NewLine();
-		ImGui::SliderInt("FOV", &i2, 30, 120, "%d");
+		ImGui::SliderInt("FOV", &ifov, 30, 120, "%d");
+		ImGui::SliderFloat("SIZE", &i3, 1.0f, 10.0f);
 		ImGui::NewLine();
 		ImGui::Button("Render", ImVec2(250, 60));
 		ImGui::BeginChild("Inside color", size2);
