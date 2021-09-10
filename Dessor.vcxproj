@@ -155,7 +155,7 @@
     <ClCompile Include="Libraries\include\IMGUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Libraries\include\IMGUI\imgui_tables.cpp" />
     <ClCompile Include="Libraries\include\IMGUI\imgui_widgets.cpp" />
-    <ClCompile Include="master.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libraries\include\IMGUI\imconfig.h" />

@@ -24,7 +24,7 @@
     <ClCompile Include="glad.c">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
-    <ClCompile Include="master.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
     <ClCompile Include="Libraries\include\IMGUI\imgui.cpp">
