@@ -1,0 +1,6 @@
+﻿  main.cpp
+D:\Documentos\Dev\dessor\main.cpp(104,64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\Dev\dessor\main.cpp(104,18): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+D:\Documentos\Dev\dessor\main.cpp(105,53): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\Dev\dessor\main.cpp(105,84): warning C4305: 'argument': truncation from 'double' to 'float'
+  Dessor.vcxproj -> D:\Documentos\Dev\dessor\x64\Debug\Dessor.exe
