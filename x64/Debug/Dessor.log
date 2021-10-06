@@ -1,7 +1,10 @@
 ﻿  main.cpp
-C:\Users\acses\source\repos\dessor-fixed\main.cpp(217,73): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\acses\source\repos\dessor-fixed\main.cpp(217,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\acses\source\repos\dessor-fixed\main.cpp(218,63): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\acses\source\repos\dessor-fixed\main.cpp(218,93): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\acses\source\repos\dessor-fixed\main.cpp(318,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(221,73): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(221,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(222,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(222,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(256,78): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(256,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(328,57): warning C4305: 'argument': truncation from 'double' to 'float'
+glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Users\acses\source\repos\dessor-fixed\x64\Debug\glfw3.pdb'; linking object as if no debug info
   Dessor.vcxproj -> C:\Users\acses\source\repos\dessor-fixed\x64\Debug\Dessor.exe

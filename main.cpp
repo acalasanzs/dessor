@@ -199,7 +199,11 @@ int main()
     // Game loop
     while (!glfwWindowShouldClose(window))
     {
+        int width, height;
+        glfwGetWindowSize(window, &width, &height);
 
+        std::string all = std::to_string(width) + "px, " + std::to_string(height) + "px;";
+        const char* cstr = all.c_str();
         // Render
         // Clear the colorbuffer
         glClearColor(0.11f, 0.11f, 0.11f, 1.0f);
@@ -244,11 +248,12 @@ int main()
             style->GrabMinSize = 5.0f;
             style->GrabRounding = 3.0f;
             // rgb(55, 66, 250)
+            style->Colors[ImGuiCol_Text] = ImVec4((255.0f), (255.0f), (255.0f), 1.00f);
             style->Colors[ImGuiCol_Button] = ImVec4((55.0f / 255.0f), (66.0f / 255.0f), (250.0f / 255.0f), 1.00f);
             // rgb(83, 82, 237)
             style->Colors[ImGuiCol_ButtonHovered] = ImVec4((83.0f / 255.0f), (82.0f / 255.0f), (237.0f / 255.0f), 1.00f);
             style->Colors[ImGuiCol_ButtonActive] = ImVec4(0.56f, 0.56f, 0.58f, 1.00f);
-            ImGui::SetNextWindowPos(ImVec2(1280 / 2 - 117.5 / 2, 720 / 2 + 50));
+            ImGui::SetNextWindowPos(ImVec2(width / 2 - 117.5 / 2, height / 2 + 50));
             ImGui::SetNextWindowBgAlpha(0);
             ImGui::SetNextWindowSize(ImVec2(100, 50));
             ImGui::Begin("Button", NULL, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_None | ImGuiTableColumnFlags_NoResize);
@@ -270,7 +275,7 @@ int main()
             style->GrabMinSize = 5.0f;
             style->GrabRounding = 3.0f;
 
-            style->Colors[ImGuiCol_Text] = ImVec4((55.0f / 255.0f), (66.0f / 255.0f), (250.0f / 255.0f), 1.00f);
+            style->Colors[ImGuiCol_Text] = ImVec4((255.0f), (255.0f), (255.0f), 1.00f);
             style->Colors[ImGuiCol_TextDisabled] = ImVec4(0.24f, 0.23f, 0.29f, 1.00f);
             style->Colors[ImGuiCol_WindowBg] = ImVec4(0.06f, 0.05f, 0.07f, 1.00f);
             style->Colors[ImGuiCol_PopupBg] = ImVec4(0.07f, 0.07f, 0.09f, 1.00f);
@@ -310,7 +315,12 @@ int main()
             ImGui::Begin("Drawing HyperCube Options", NULL, ImGuiWindowFlags_AlwaysAutoResize);
             ImGui::PopStyleColor();
             ImGui::Checkbox("Draw Shape", &drawCube);
+            ImGui::SameLine();
+            if (ImGui::Button("close", ImVec2(60, 25))) {
+                specs = false;
+            }
             ImGui::SliderInt("D", &i2, 0, atoi(name), "%d-dimensional hypercube");
+            ImGui::TextColored(ImVec4(255, 0, 255, 255), cstr);
             ImGui::InputText("", name, 7, ImGuiInputTextFlags_CharsDecimal | ImGuiInputTextFlags_EnterReturnsTrue);
             ImGui::SameLine();
             ImGui::TextColored(ImVec4(255, 0, 255, 255), name);
