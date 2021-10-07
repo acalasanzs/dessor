@@ -80,6 +80,9 @@
     <ClInclude Include="Libraries\include\IMGUI\imstb_truetype.h">
       <Filter>Archivos de encabezado\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="shader_s.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Dessor.rc">

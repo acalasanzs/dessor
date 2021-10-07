@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\acses\source\repos\dessor-fixed\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\acses\source\repos\dessor-fixed\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\07cal\source\repos\dessor-fixed\dessor\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\07cal\source\repos\dessor-fixed\dessor\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\acses\source\repos\dessor-fixed\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\acses\source\repos\dessor-fixed\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\07cal\source\repos\dessor-fixed\dessor\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\07cal\source\repos\dessor-fixed\dessor\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -99,7 +99,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;freetype265d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalLibraryDirectories>C:\Users\acses\source\repos\dessor-fixed\glew-2.1.0\lib;C:\Users\acses\source\repos\dessor-fixed\Libraries\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\07cal\source\repos\dessor-fixed\dessor\glew-2.1.0\lib;C:\Users\07cal\source\repos\dessor-fixed\dessor\Libraries\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -131,7 +131,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;freetype265d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalLibraryDirectories>C:\Users\acses\source\repos\dessor-fixed\glew-2.1.0\lib;C:\Users\acses\source\repos\dessor-fixed\Libraries\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\07cal\source\repos\dessor-fixed\dessor\glew-2.1.0\lib;C:\Users\07cal\source\repos\dessor-fixed\dessor\Libraries\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -172,6 +172,7 @@
     <ClInclude Include="Libraries\include\IMGUI\imstb_textedit.h" />
     <ClInclude Include="Libraries\include\IMGUI\imstb_truetype.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="shader_s.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Dessor.rc" />
