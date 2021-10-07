@@ -1,11 +1,10 @@
 ﻿  main.cpp
-C:\Users\07cal\source\repos\dessor-fixed\dessor\shader_s.h(43,40): warning C4101: 'e': variable local sin referencia
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(239,33): warning C4838: la conversión de 'FT_Pos' en 'unsigned int' requiere una conversión de restricción
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(286,73): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(286,27): warning C4244: 'inicializando': conversión de 'double' a 'const float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(287,63): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(287,93): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(321,78): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(321,54): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(393,57): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\07cal\source\repos\dessor-fixed\dessor\shader_s.h(56,40): warning C4101: 'e': variable local sin referencia
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(329,73): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(329,27): warning C4244: 'inicializando': conversión de 'double' a 'const float'; posible pérdida de datos
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(330,63): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(330,93): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(364,78): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(364,54): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(437,57): warning C4305: 'argumento': truncamiento de 'double' a 'float'
   Dessor.vcxproj -> C:\Users\07cal\source\repos\dessor-fixed\dessor\x64\Debug\Dessor.exe

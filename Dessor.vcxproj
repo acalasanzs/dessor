@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="glew.c" />
+    <ClCompile Include="learnopengl.cpp" />
     <ClCompile Include="Libraries\include\IMGUI\imgui.cpp" />
     <ClCompile Include="Libraries\include\IMGUI\imgui_demo.cpp" />
     <ClCompile Include="Libraries\include\IMGUI\imgui_draw.cpp" />
