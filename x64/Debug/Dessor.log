@@ -1,10 +1,11 @@
 ﻿  main.cpp
-C:\Users\07cal\source\repos\dessor-fixed\dessor\shader_s.h(56,40): warning C4101: 'e': variable local sin referencia
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(329,73): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(329,27): warning C4244: 'inicializando': conversión de 'double' a 'const float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(330,63): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(330,93): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(364,78): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(364,54): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\07cal\source\repos\dessor-fixed\dessor\main.cpp(437,57): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  Dessor.vcxproj -> C:\Users\07cal\source\repos\dessor-fixed\dessor\x64\Debug\Dessor.exe
+C:\Users\acses\source\repos\dessor-fixed\shader_s.h(56,40): warning C4101: 'e': unreferenced local variable
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(165,73): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(165,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(166,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(166,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(193,78): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(193,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\acses\source\repos\dessor-fixed\main.cpp(265,57): warning C4305: 'argument': truncation from 'double' to 'float'
+glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Users\acses\source\repos\dessor-fixed\x64\Debug\glfw3.pdb'; linking object as if no debug info
+  Dessor.vcxproj -> C:\Users\acses\source\repos\dessor-fixed\x64\Debug\Dessor.exe
